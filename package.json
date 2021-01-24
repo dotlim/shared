@@ -2,7 +2,7 @@
   "name": "@dotlim/shared",
   "version": "1.0.0",
   "description": "Common helper functions in development",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc"
   },
