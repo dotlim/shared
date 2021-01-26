@@ -1,5 +1,6 @@
 export * from './looseEqual';
 export * from './cloneDeep';
+export * from './isEmpty';
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 export const hasOwn = (val: object, key: string | symbol): key is keyof typeof val => hasOwnProperty.call(val, key);
@@ -23,6 +24,7 @@ export const isPromise = <T = any>(val: unknown): val is Promise<T> => {
   return isObject(val) && isFunction(val.then) && isFunction(val.catch);
 };
 export const isPlainObject = (val: unknown): val is object => toTypeString(val) === '[object Object]';
+export const isArguments = (val: unknown): boolean => toTypeString(val) === '[object Argumets]';
 
 // no operator
 export const noop = () => {};
